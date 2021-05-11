@@ -1,16 +1,11 @@
 pipeline {
-    agent none 
+    agent any
+
     stages {
-        stage('Example Build') { 
+        stage('Hello') {
             steps {
-                echo 'Hello, Maven'
-                sh 'mvn --version'
-            }
-        }
-        stage('Example Test') {
-            steps {
-                echo 'Hello, JDK'
-                sh 'java -version'
+                echo 'Hello World'
+                echo 'Hello you'
             }
         }
     }
