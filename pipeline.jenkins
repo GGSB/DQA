@@ -1,9 +1,16 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent none 
     stages {
-        stage('build') {
+        stage('Example Build') { 
             steps {
-                sh 'python --version'
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+            }
+        }
+        stage('Example Test') {
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
             }
         }
     }
